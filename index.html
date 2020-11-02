@@ -3,18 +3,18 @@
 
 <head>
     <title>After School Club</title>
-    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue"></script> <!-- This is a package we will be using which is the Vue package-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <meta charset="UTF-8">
 </head>
 
 <body>
-    <div id="app">
+    <div id="app">    <!-- The div used which is app will be linked with the Vue.js app-->
         <header>
             <div class="navbar navbar-default">
                 <div class="navbar-header">
-                    <h1 v-text="sitename"></h1>
+                    <h1 v-text="sitename"></h1> 
                 </div>
             </div>
         </header>
@@ -22,7 +22,7 @@
             <div class="row">
                 <div class="col-md-2 col-md-offset-1">
 
-                    <img v-bind:src="product.image" alt="maths icon">
+                    <img v-bind:src="product.image" alt="maths icon"> <!-- this is the Maths icon --> 
 
                 </div>
                 <div class="col-md-6 col-md-offset-0 description">
@@ -31,7 +31,7 @@
                     <p v-text="product.price">
                     <p v-text="product.spaces + product.spaceNumber"></p>
                     </p>
-                    <button class="default" v-on:click="addToCart"style="border-radius: 8px;">Add To Cart</button>
+                    <button class="default" v-on:click="addToCart"style="border-radius: 8px;">Add To Cart</button> <!-- the V-onclock will allow the user to click the button -->
 
                 </div>
             </div>
@@ -44,7 +44,7 @@
 
 <script>
     var webstore = new Vue({
-        el: '#app',
+        el: '#app', // this links to the <div> that has the ID #app
         data: {
             sitename: "After School Club",
             product: {
